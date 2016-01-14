@@ -1,0 +1,347 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>teamscale_client module &mdash; Python Teamscale Client 0.1 alpha documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1 alpha',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Python Teamscale Client 0.1 alpha documentation" href="index.html" />
+    <link rel="prev" title="Welcome to Python Teamscale Client’s documentation!" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Python Teamscale Client’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Python Teamscale Client 0.1 alpha documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-teamscale_client">
+<span id="teamscale-client-module"></span><h1>teamscale_client module<a class="headerlink" href="#module-teamscale_client" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="teamscale_client.TeamscaleClient">
+<em class="property">class </em><code class="descclassname">teamscale_client.</code><code class="descname">TeamscaleClient</code><span class="sig-paren">(</span><em>url</em>, <em>username</em>, <em>password</em>, <em>project</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/teamscale_client.html#TeamscaleClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#teamscale_client.TeamscaleClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Basic Python service client to access Teamscale&#8217;s REST Api.</p>
+<p>Request handling done with:
+<a class="reference external" href="http://docs.python-requests.org/en/latest/">http://docs.python-requests.org/en/latest/</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>url</strong> (<em>str</em>) &#8211; The url to Teamscale (including the port)</li>
+<li><strong>username</strong> (<em>str</em>) &#8211; The username to use for authentication</li>
+<li><strong>password</strong> (<em>str</em>) &#8211; The password/api key to use for authentication</li>
+<li><strong>project</strong> (<em>str</em>) &#8211; The project on which to work</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="teamscale_client.TeamscaleClient.get_global_service_url">
+<code class="descname">get_global_service_url</code><span class="sig-paren">(</span><em>service_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/teamscale_client.html#TeamscaleClient.get_global_service_url"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#teamscale_client.TeamscaleClient.get_global_service_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the full url pointing to a global service.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>service_name</strong> (<em>str</em>) &#8211; the name of the service for which the url should be generated</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The full url</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="teamscale_client.TeamscaleClient.get_project_service_url">
+<code class="descname">get_project_service_url</code><span class="sig-paren">(</span><em>service_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/teamscale_client.html#TeamscaleClient.get_project_service_url"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#teamscale_client.TeamscaleClient.get_project_service_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the full url pointing to a project service.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>service_name</strong> (<em>str</em>) &#8211; the name of the service for which the url should be generated</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The full url</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="teamscale_client.TeamscaleClient.put">
+<code class="descname">put</code><span class="sig-paren">(</span><em>url</em>, <em>json</em>, <em>parameters</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/teamscale_client.html#TeamscaleClient.put"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#teamscale_client.TeamscaleClient.put" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends a put request to the given service url with the json payload as content.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>url</strong> (<em>str</em>) &#8211; The URL for which to execute a PUT request</li>
+<li><strong>json</strong> &#8211; The JSON Object to attach as content</li>
+<li><strong>parameters</strong> (<em>dict</em>) &#8211; parameters to attach to the url</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">request&#8217;s response</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">requests.Response</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><code class="xref py py-exc docutils literal"><span class="pre">Exception</span></code> &#8211;
+If anything goes wrong</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="teamscale_client.TeamscaleClient.read_json_from_file">
+<code class="descname">read_json_from_file</code><span class="sig-paren">(</span><em>file_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/teamscale_client.html#TeamscaleClient.read_json_from_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#teamscale_client.TeamscaleClient.read_json_from_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads JSON content from a file and parses it to ensure basic integrity.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>file_path</strong> (<em>str</em>) &#8211; File from which to read the JSON content.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The parsed JSON data.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="teamscale_client.TeamscaleClient.upload_findings">
+<code class="descname">upload_findings</code><span class="sig-paren">(</span><em>findings</em>, <em>timestamp</em>, <em>message</em>, <em>partition</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/teamscale_client.html#TeamscaleClient.upload_findings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#teamscale_client.TeamscaleClient.upload_findings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Uploads a list of findings</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>findings</strong> &#8211; <p>findings data in json format.
+The findings should have the following format:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s">&quot;findings&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s">&quot;findingTypeId&quot;</span> <span class="p">:</span> <span class="s">&quot;&lt;external-finding-type-id&gt;&quot;</span><span class="p">,</span>
+                <span class="s">&quot;message&quot;</span> <span class="p">:</span> <span class="s">&quot;&lt;findings message&gt;&quot;</span><span class="p">,</span>
+                <span class="s">&quot;assessment&quot;</span> <span class="p">:</span> <span class="n">RED</span><span class="o">/</span><span class="n">YELLOW</span><span class="p">,</span>
+                <span class="s">&quot;startLine&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s">&quot;endLine&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s">&quot;startOffset&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s">&quot;endOffset&quot;</span> <span class="p">:</span> <span class="mi">26</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s">&quot;path&quot;</span> <span class="p">:</span> <span class="s">&quot;path/to/file/in/teamscale&quot;</span>
+    <span class="p">},</span>
+    <span class="o">...</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><strong>timestamp</strong> (<em>int</em>) &#8211; timestamp (unix format) for which to upload the findings</li>
+<li><strong>message</strong> (<em>str</em>) &#8211; The message to use for the generated upload commit</li>
+<li><strong>partition</strong> (<em>str</em>) &#8211; The partition&#8217;s id into which the findings should be added</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">object generated by the request</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">requests.Response</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><code class="xref py py-exc docutils literal"><span class="pre">Exception</span></code> &#8211;
+If anything goes wrong</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="teamscale_client.TeamscaleClient.upload_metric_definitions">
+<code class="descname">upload_metric_definitions</code><span class="sig-paren">(</span><em>metric_definitions</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/teamscale_client.html#TeamscaleClient.upload_metric_definitions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#teamscale_client.TeamscaleClient.upload_metric_definitions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Uploads metric definitions in json format</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>metric_definitions</strong> &#8211; <p>metric descriptions in json format
+The definitions should have the following format:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s">&quot;analysisGroup&quot;</span><span class="p">:</span> <span class="s">&quot;&lt;GROUP-NAME&gt;&quot;</span><span class="p">,</span>
+        <span class="s">&quot;metricDefinition&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s">&quot;aggregation&quot;</span><span class="p">:</span> <span class="s">&quot;SUM&quot;</span><span class="p">,</span>
+            <span class="s">&quot;description&quot;</span><span class="p">:</span> <span class="s">&quot;-- not set --&quot;</span><span class="p">,</span>
+            <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;Sample Metric&quot;</span><span class="p">,</span>
+            <span class="s">&quot;properties&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s">&quot;SIZE_METRIC&quot;</span>
+            <span class="p">],</span>
+            <span class="s">&quot;valueType&quot;</span><span class="p">:</span> <span class="s">&quot;NUMERIC&quot;</span>
+        <span class="p">},</span>
+        <span class="s">&quot;metricId&quot;</span><span class="p">:</span> <span class="s">&quot;sample-metric-id&quot;</span>
+    <span class="p">},</span>
+    <span class="o">...</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">object generated by the request</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">requests.Response</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><code class="xref py py-exc docutils literal"><span class="pre">Exception</span></code> &#8211;
+If anything goes wrong</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="teamscale_client.TeamscaleClient.upload_metrics">
+<code class="descname">upload_metrics</code><span class="sig-paren">(</span><em>metrics</em>, <em>timestamp</em>, <em>message</em>, <em>partition</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/teamscale_client.html#TeamscaleClient.upload_metrics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#teamscale_client.TeamscaleClient.upload_metrics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Uploads a list of metrics</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>metrics</strong> &#8211; <p>metrics data in json format.
+The metrics should have the following format:</p>
+<div class="highlight-python"><div class="highlight"><pre>[
+    {
+        &quot;metrics&quot;: {
+            &quot;&lt;metric-id-1&gt;&quot;: &lt;metric-value&gt;,
+            &quot;&lt;metric-id-2&gt;&quot;: &lt;metric-value&gt;
+        },
+        &quot;path&quot;: &quot;path/to/file/in/teamscale&quot;
+    },
+    ...
+]
+</pre></div>
+</div>
+</li>
+<li><strong>timestamp</strong> (<em>int</em>) &#8211; timestamp (unix format) for which to upload the metrics</li>
+<li><strong>message</strong> (<em>str</em>) &#8211; The message to use for the generated upload commit</li>
+<li><strong>partition</strong> (<em>str</em>) &#8211; The partition&#8217;s id into which the metrics should be added</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">object generated by the upload request</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">requests.Response</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><code class="xref py py-exc docutils literal"><span class="pre">Exception</span></code> &#8211;
+If anything goes wrong</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Welcome to Python Teamscale Client&#8217;s documentation!</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/teamscale_client.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Python Teamscale Client’s documentation!"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Python Teamscale Client 0.1 alpha documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, CQSE GmbH.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.4.
+    </div>
+  </body>
+</html>
